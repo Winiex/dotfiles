@@ -4,4 +4,4 @@ These are my dotfiles.
 
 ##How to Install
 
-curl -L http://git.io/winiex-dotfiles
+curl -L http://git.io/winiex-dotfiles | bash
