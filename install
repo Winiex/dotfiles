@@ -10,7 +10,7 @@ echo "#  Now clone dotfiles into .dotfiles  #"
 echo "#######################################"
 printf "\n"
 
-git clone git@github.com:Winiex/dotfiles.git ~/.dotfiles
+git clone https://github.com/Winiex/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
 #Install vim configurations.
@@ -25,3 +25,25 @@ git submodule update
 
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/vim/vim/ ~/.vim
+
+#Install bash configurations.
+printf "\n"
+echo "#######################################"
+echo "#  Now install bash configurations    #"
+echo "#######################################\n"
+printf "\n"
+
+if [ -f ~/.bash_profile ]; then
+    echo "Found existing .bash_profile in your HOME directory."
+    echo "Move it to ~/.bash_profile_backup."
+    mv ~/.bash_profile ~/.bash_profile_backup
+fi
+
+if [ -f ~/.bashrc ]; then
+    echo "Found existing .bashrc in your HOME directory."
+    echo "Move it to ~/.bashrc_backup."
+    mv ~/.bashrc ~/.bashrc_backup
+fi
+
+ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
