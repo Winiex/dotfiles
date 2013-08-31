@@ -1,0 +1,1 @@
+/Users/nieweilin/.bash_it/plugins/available/nginx.plugin.bash
