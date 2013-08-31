@@ -1,0 +1,16 @@
+[submodule "vim/vim/bundle/vundle"]
+	path = vim/vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+    ignore = dirty
+[submodule "vim/vim/bundle/The-NERD-tree"]
+	path = vim/vim/bundle/The-NERD-tree
+	url = https://github.com/vim-scripts/The-NERD-tree.git
+    ignore = dirty
+[submodule "vim/vim/bundle/mru.vim"]
+	path = vim/vim/bundle/mru.vim
+	url = https://github.com/vim-scripts/mru.vim.git
+    ignore = dirty
+[submodule "vim/vim/bundle/snipMate"]
+	path = vim/vim/bundle/snipMate
+	url = https://github.com/vim-scripts/snipMate.git
+    ignore = dirty
