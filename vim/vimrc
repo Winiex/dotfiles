@@ -41,7 +41,7 @@ set expandtab
 "Be smart when using tabs
 set smarttab
 
-"1 tab == 5 spaces
+"1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
 
@@ -125,11 +125,12 @@ call vundle#rc()
 "Bundle 'amiorin/vim-project'
 "Bundle 'sukima/xmledit'
 "Bundle 'vim-scripts/taglist.vim'
+"Bundle 'vim-scripts/L9'
+"Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/snipMate'
 Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'vim-scripts/L9'
-Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/mru.vim'
+Bundle 'kien/ctrlp.vim'
 
 """"""""""""""""""""""""""""""""""""""""
 " Helper functions                     "
@@ -259,20 +260,6 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=html.ruby.erb
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 """"""""""""""""""""""""""""""""""""""""
-" Persnal keys mappings                "
-""""""""""""""""""""""""""""""""""""""""
-"FuzzyFind shortcuts
-map zff :FufFile<Enter>
-map zf :FufCoverageFile<Enter>
-
-""Format the entire source code file
-map zfm gg=G
-
-"Insert newline without entering insert mode
-nmap <S-Enter> O<Esc>
-nmap <Enter> o<Esc>
-
-""""""""""""""""""""""""""""""""""""""""
 " Startup functions                    "
 """"""""""""""""""""""""""""""""""""""""
 
@@ -288,3 +275,19 @@ endfunction
 
 "Run startup function
 au VimEnter * call Startup()
+
+""""""""""""""""""""""""""""""""""""""""
+" Persnal keys mappings                "
+""""""""""""""""""""""""""""""""""""""""
+"CtrlP mappings
+map zp :CtrlP<Enter>
+map zpb :CtrlPBuffer<Enter>
+map zpm :CtrlPMRU<Enter>
+map zpx :CtrlPMixed<Enter>
+
+""Format the entire source code file
+map zf gg=G
+
+"Insert newline without entering insert mode
+nmap <S-Enter> O<Esc>
+nmap <Enter> o<Esc>

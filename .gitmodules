@@ -14,3 +14,7 @@
 	path = vim/vim/bundle/snipMate
 	url = https://github.com/vim-scripts/snipMate.git
     ignore = dirty
+[submodule "vim/vim/bundle/ctrlp.vim"]
+	path = vim/vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+    ignore = dirty
