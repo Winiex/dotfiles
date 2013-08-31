@@ -4,8 +4,10 @@
 
 #Clone the dotfiles from github.
 git clone git@github.com:Winiex/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 
 #Install vim configurations.
+
 git submodule init
 git submodule update
 
