@@ -73,6 +73,23 @@ ln -s ~/.dotfiles/bash/bash-it ~/.bash_it
 
 echo "Success"
 
+#Install custom tools
+printf "\n"
+echo "#######################################"
+echo "#  Now install bash configurations    #"
+echo "#######################################"
+printf "\n"
+
+if [ -d ~/bin ]; then
+    echo "Found existing bin directory in your HOME directory."
+    echo "Move it to ~/bin_backup."
+    mv ~/bin ~/bin_backup
+fi
+
+ln -s ~/.dotfiles/bin ~/bin
+
+echo "Success"
+
 printf "\n"
 echo "#######################################"
 echo "#  Dotfiles install success. Enjoy.:) #"
