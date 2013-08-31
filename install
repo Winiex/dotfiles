@@ -66,9 +66,3 @@ fi
 ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
 ln -s ~/.dotfiles/bash/bash-it ~/.bash_it
-
-printf "\n"
-echo "#######################################"
-echo "#  Now configure bash_it              #"
-echo "#######################################"
-printf "\n"
