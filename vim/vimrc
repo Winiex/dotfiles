@@ -131,6 +131,7 @@ Bundle 'vim-scripts/snipMate'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'vim-scripts/mru.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
 
 """"""""""""""""""""""""""""""""""""""""
 " Helper functions                     "
