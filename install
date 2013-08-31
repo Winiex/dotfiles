@@ -2,6 +2,12 @@
 
 #Run this script will install the dotfiles.
 
+#Check whether the ~/.dotfiles directory exists.
+if [ -d ~/.dotfiles ]; then
+    echo "~/.dotfiles directory exists. Exit."
+    exit 1
+fi
+
 #Clone the dotfiles from github.
 #Use this childish ASCII art to make it rock a little bit.
 printf "\n"
@@ -17,7 +23,7 @@ cd ~/.dotfiles
 printf "\n"
 echo "#######################################"
 echo "#  Now install vim configurations     #"
-echo "#######################################\n"
+echo "#######################################"
 printf "\n"
 
 git submodule init
@@ -30,7 +36,7 @@ ln -s ~/.dotfiles/vim/vim/ ~/.vim
 printf "\n"
 echo "#######################################"
 echo "#  Now install bash configurations    #"
-echo "#######################################\n"
+echo "#######################################"
 printf "\n"
 
 if [ -f ~/.bash_profile ]; then
@@ -52,7 +58,7 @@ ln -s ~/.dotfiles/bash/bash-it ~/.bash_it
 printf "\n"
 echo "#######################################"
 echo "#  Now configure bash_it              #"
-echo "#######################################\n"
+echo "#######################################"
 printf "\n"
 
 ~/.bash_it/install.sh
