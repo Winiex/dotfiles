@@ -19,6 +19,8 @@ printf "\n"
 git clone https://github.com/Winiex/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
+echo "Success"
+
 #Install vim configurations.
 printf "\n"
 echo "#######################################"
@@ -44,6 +46,8 @@ fi
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/vim/vim/ ~/.vim
 
+echo "Success"
+
 #Install bash configurations.
 printf "\n"
 echo "#######################################"
@@ -66,3 +70,11 @@ fi
 ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
 ln -s ~/.dotfiles/bash/bash-it ~/.bash_it
+
+echo "Success"
+
+printf "\n"
+echo "#######################################"
+echo "#  Dotfiles install success. Enjoy.:) #"
+echo "#######################################"
+printf "\n"
