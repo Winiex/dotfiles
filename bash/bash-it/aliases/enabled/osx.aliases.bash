@@ -1,1 +1,0 @@
-/Users/nieweilin/.bash_it/aliases/available/osx.aliases.bash
