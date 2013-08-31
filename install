@@ -29,6 +29,18 @@ printf "\n"
 git submodule init
 git submodule update
 
+if [ -d ~/.vim ]; then
+    echo "Found existing .vim directory in your HOME directory."
+    echo "Move it to ~/.vim_backup."
+    mv ~/.vim ~/.vim_backup
+fi
+
+if [ -f ~/.vimrc ]; then
+    echo "Found existing .vimrc file in your HOME directory."
+    echo "Move it to ~/.vimrc_backup."
+    mv ~/.vimrc ~/.vimrc_backup
+fi
+
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/vim/vim/ ~/.vim
 
@@ -40,13 +52,13 @@ echo "#######################################"
 printf "\n"
 
 if [ -f ~/.bash_profile ]; then
-    echo "Found existing .bash_profile in your HOME directory."
+    echo "Found existing .bash_profile file in your HOME directory."
     echo "Move it to ~/.bash_profile_backup."
     mv ~/.bash_profile ~/.bash_profile_backup
 fi
 
 if [ -f ~/.bashrc ]; then
-    echo "Found existing .bashrc in your HOME directory."
+    echo "Found existing .bashrc file in your HOME directory."
     echo "Move it to ~/.bashrc_backup."
     mv ~/.bashrc ~/.bashrc_backup
 fi
@@ -60,5 +72,3 @@ echo "#######################################"
 echo "#  Now configure bash_it              #"
 echo "#######################################"
 printf "\n"
-
-~/.bash_it/install.sh
