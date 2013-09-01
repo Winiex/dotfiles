@@ -22,3 +22,51 @@
 	path = vim/vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
     ignore = dirty
+[submodule "vim/vim/bundle/TabBar"]
+	path = vim/vim/bundle/TabBar
+	url = https://github.com/humiaozuzu/TabBar.git
+    ignore = dirty
+[submodule "vim/vim/bundle/delimitMate"]
+	path = vim/vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+    ignore = dirty
+[submodule "vim/vim/bundle/gundo.vim"]
+	path = vim/vim/bundle/gundo.vim
+	url = https://github.com/sjl/gundo.vim.git
+    ignore = dirty
+[submodule "vim/vim/bundle/neocomplcache.vim"]
+	path = vim/vim/bundle/neocomplcache.vim
+	url = https://github.com/Shougo/neocomplcache.vim.git
+    ignore = dirty
+[submodule "vim/vim/bundle/nerdcommenter"]
+	path = vim/vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+    ignore = dirty
+[submodule "vim/vim/bundle/supertab"]
+	path = vim/vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+    ignore = dirty
+[submodule "vim/vim/bundle/syntastic"]
+	path = vim/vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+    ignore = dirty
+[submodule "vim/vim/bundle/tabular"]
+	path = vim/vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+    ignore = dirty
+[submodule "vim/vim/bundle/vim-fugitive"]
+	path = vim/vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+    ignore = dirty
+[submodule "vim/vim/bundle/vim-indent-guides"]
+	path = vim/vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
+    ignore = dirty
+[submodule "vim/vim/bundle/vim-powerline"]
+	path = vim/vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+    ignore = dirty
+[submodule "vim/vim/bundle/vim-surround"]
+	path = vim/vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+    ignore = dirty

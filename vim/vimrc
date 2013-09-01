@@ -101,37 +101,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-""""""""""""""""""""""""""""""""""""""""
-"The Bundles to install vim plugins.   "
-""""""""""""""""""""""""""""""""""""""""
-
-"Bundle 'gmarik/vundle'
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Bundle 'tpope/vim-rails.git'
-"Bundle 'mattn/zencoding-vim'
-"Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-abolish'
-"Bundle 'tpope/vim-rake'
-"Bundle 'tpope/vim-bundler'
-"Bundle 'vim-scripts/vimwiki'
-"Bundle 'mattn/gist-vim'
-"Bundle 'mattn/webapi-vim'
-"Bundle 'cakebaker/scss-syntax.vim'
-"Bundle 'hallison/vim-markdown'
-"Bundle 'mbbill/code_complete'
-"Bundle 'tpope/vim-rails'
-"Bundle 'amiorin/vim-project'
-"Bundle 'sukima/xmledit'
-"Bundle 'vim-scripts/taglist.vim'
-"Bundle 'vim-scripts/L9'
-"Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'vim-scripts/snipMate'
-Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'vim-scripts/mru.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
+source ~/.dotfiles/vim/bundle.vim
 
 """"""""""""""""""""""""""""""""""""""""
 " Helper functions                     "
@@ -272,6 +242,9 @@ function! Startup()
     
     "Make NERDTree ignore non-source-code files
     let NERDTreeIgnore = ['\.pyc$']
+
+    "Let tagbar auto-start
+    Tagbar
 endfunction
 
 "Run startup function
@@ -286,7 +259,10 @@ map zpb :CtrlPBuffer<Enter>
 map zpm :CtrlPMRU<Enter>
 map zpx :CtrlPMixed<Enter>
 
-""Format the entire source code file
+"Tagbar mappings
+map zt Tagbar<Enter>
+
+"Format the entire source code file
 map zf gg=G
 
 "Insert newline without entering insert mode
