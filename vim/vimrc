@@ -101,7 +101,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-source ~/.dotfiles/vim/bundle.vim
+source ~/.dotfiles/vim/plugin/bundle.vim
 
 """"""""""""""""""""""""""""""""""""""""
 " Helper functions                     "
@@ -231,6 +231,16 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=html.ruby.erb
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 """"""""""""""""""""""""""""""""""""""""
+" Plugin Configurations                "
+""""""""""""""""""""""""""""""""""""""""
+
+"Make NERDTree ignore non-source-code files
+let NERDTreeIgnore = ['\.pyc$']
+
+"Neocomplcache configurations
+source ~/.dotfiles/vim/plugin/neocomplcache.vim
+
+""""""""""""""""""""""""""""""""""""""""
 " Startup functions                    "
 """"""""""""""""""""""""""""""""""""""""
 
@@ -240,8 +250,6 @@ function! Startup()
         NERDTree
     end
     
-    "Make NERDTree ignore non-source-code files
-    let NERDTreeIgnore = ['\.pyc$']
 
     "Let tagbar auto-start
     Tagbar
@@ -254,16 +262,22 @@ au VimEnter * call Startup()
 " Persnal keys mappings                "
 """"""""""""""""""""""""""""""""""""""""
 "CtrlP mappings
-map zp :CtrlP<Enter>
+map zps :CtrlP<Enter>
 map zpb :CtrlPBuffer<Enter>
 map zpm :CtrlPMRU<Enter>
 map zpx :CtrlPMixed<Enter>
 
 "Tagbar mappings
-map zt Tagbar<Enter>
+map zgs :Tagbar<Enter>
+
+"Tabbar mappings"
+map zn :Tbbn<Enter>
+map zb :Tbbp<Enter>
+map zts :TbStart<Enter>
+map ztc :TbStop<Enter>
 
 "Format the entire source code file
-map zf gg=G
+map zfm gg=G
 
 "Insert newline without entering insert mode
 nmap <S-Enter> O<Esc>
