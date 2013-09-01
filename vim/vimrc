@@ -273,6 +273,7 @@ map zgs :Tagbar<Enter>
 "Tabbar mappings"
 map zn :Tbbn<Enter>
 map zb :Tbbp<Enter>
+map zd :Tbbd<Enter>
 map zts :TbStart<Enter>
 map ztc :TbStop<Enter>
 
