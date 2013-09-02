@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""
 " Now set the colors and fonts        "
 """""""""""""""""""""""""""""""""""""""
-colorscheme desert
+colorscheme torte
 set background=dark
 
 if has('gui_running')
