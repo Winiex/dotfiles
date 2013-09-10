@@ -13,3 +13,5 @@ export GIT_EDITOR='/usr/bin/vim'
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
