@@ -12,7 +12,6 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
-Bundle 'sjl/gundo.vim'
 Bundle 'godlygeek/tabular'
 
 "IDE features
@@ -24,3 +23,4 @@ Bundle 'humiaozuzu/TabBar'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
+Bundle 'nvie/vim-flake8'
