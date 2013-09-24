@@ -1,6 +1,8 @@
 """""""""""""""""""""""""""""""""""""""
 " The Bundles to install vim plugins   "
 """"""""""""""""""""""""""""""""""""""""
+"Appearence
+Bundle "flazz/vim-colorschemes"
 
 "Code completions
 Bundle 'Shougo/neocomplcache.vim'
