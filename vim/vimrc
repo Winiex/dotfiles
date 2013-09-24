@@ -157,7 +157,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""
 " Now set the colors and fonts        "
 """""""""""""""""""""""""""""""""""""""
-colorscheme Monokai
+colorscheme molokai
 
 """""""""""""""""""""""""""""""""""""""
 " Common Configurations               "
