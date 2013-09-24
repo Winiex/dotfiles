@@ -1,13 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""
-" Now set the colors and fonts        "
-"""""""""""""""""""""""""""""""""""""""
-colorscheme torte
-set background=dark
-
-if has('gui_running')
-  set guifont=Monaco
-endif
-
 "Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -163,6 +153,11 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""
+" Now set the colors and fonts        "
+"""""""""""""""""""""""""""""""""""""""
+colorscheme Monokai
 
 """""""""""""""""""""""""""""""""""""""
 " Common Configurations               "
