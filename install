@@ -73,7 +73,24 @@ ln -s ~/.dotfiles/bash/bash-it ~/.bash_it
 
 echo "Success"
 
-#Install custom tools
+#Install tmux configurations.
+printf "\n"
+echo "#######################################"
+echo "#  Now install tmux configurations    #"
+echo "#######################################"
+printf "\n"
+
+if [ -f ~/.tmux.conf ]; then
+    echo "Found existing .tmux.conf file in your HOME directory."
+    echo "Move it to ~/.tmux.conf_backup"
+    mv ~/.tmux.conf ~/.tmux.conf_backup
+fi
+
+ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+
+echo "Success"
+
+#Install custom tools.
 printf "\n"
 echo "#######################################"
 echo "#  Now install bash configurations    #"
@@ -87,6 +104,7 @@ if [ -d ~/bin ]; then
 fi
 
 ln -s ~/.dotfiles/bin ~/bin
+tmux source-file ~/.tmux.conf
 
 echo "Success"
 
