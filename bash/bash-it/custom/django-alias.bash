@@ -1,4 +1,5 @@
 #django alias
+alias django='./manage.py'
 alias django-changepassword='./manage.py changepassword'
 alias django-dumpdata='./manage.py dumpdata'
 alias django-shell='./manage.py shell'
