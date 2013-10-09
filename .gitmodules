@@ -26,10 +26,6 @@
 	path = vim/vim/bundle/TabBar
 	url = https://github.com/humiaozuzu/TabBar.git
     ignore = dirty
-[submodule "vim/vim/bundle/delimitMate"]
-	path = vim/vim/bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
-    ignore = dirty
 [submodule "vim/vim/bundle/neocomplcache.vim"]
 	path = vim/vim/bundle/neocomplcache.vim
 	url = https://github.com/Shougo/neocomplcache.vim.git
