@@ -1,1 +1,1 @@
-alias cuvirtualenv='echo $VIRTUALENVWRAPPER_VIRTUALENV'
+alias cuvirtualenv='echo $VIRTUAL_ENV'
