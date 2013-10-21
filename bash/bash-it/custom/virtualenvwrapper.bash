@@ -1,1 +1,1 @@
-alias cuvirtualenv='echo $VIRTUAL_ENV'
+alias cuvirtualenv='echo ${VIRTUAL_ENV##*/}'
