@@ -157,7 +157,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""
 " Now set the colors and fonts        "
 """""""""""""""""""""""""""""""""""""""
-colorscheme molokai
+colorscheme jelleybeans
 
 """""""""""""""""""""""""""""""""""""""
 " Common Configurations               "
