@@ -26,5 +26,14 @@ if [ -f /usr/bin/virtualenvwrapper.sh ]; then
     source /usr/bin/virtualenvwrapper.sh
 fi
 
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    # Take linux distro into consideration, because in arch linux, python's default version is python 3000
+    if [[ "$distro" == *Arch* ]]
+    then
+        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+    fi
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
