@@ -68,3 +68,9 @@
 [submodule "vim/vim/bundle/vim-colorschemes"]
 	path = vim/vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vim/vim/bundle/delimitMate"]
+	path = vim/vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "vim/vim/bundle/emmet-vim"]
+	path = vim/vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git

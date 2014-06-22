@@ -25,4 +25,9 @@ Bundle 'humiaozuzu/TabBar'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
+
+"Python support
 Bundle 'nvie/vim-flake8'
+
+"Html and CSS support
+Bundle 'mattn/emmet-vim'
