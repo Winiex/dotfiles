@@ -31,3 +31,4 @@ Bundle 'nvie/vim-flake8'
 
 "Html and CSS support
 Bundle 'mattn/emmet-vim'
+Bundle 'vim-scripts/django.vim'
