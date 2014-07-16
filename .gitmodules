@@ -17,3 +17,18 @@
 [submodule "vim/vim/bundle/vim-flake8"]
 	path = vim/vim/bundle/vim-flake8
 	url = https://github.com/nvie/vim-flake8.git
+[submodule "vim/vim/bundle/YouCompleteMe"]
+	path = vim/vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/vim/bundle/ctrlp.vim"]
+	path = vim/vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/vim/bundle/emmet-vim"]
+	path = vim/vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "vim/vim/bundle/syntastic"]
+	path = vim/vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/vim/bundle/vim-powerline"]
+	path = vim/vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git

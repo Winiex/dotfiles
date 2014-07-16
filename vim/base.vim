@@ -8,9 +8,18 @@ call vundle#rc()
 source ~/.dotfiles/vim/plugin/vundle.vim
 
 """"""""""""""""""""""""""""""""""""""""
-" Files, backups and undo              "
+" Status line                          "
 """"""""""""""""""""""""""""""""""""""""
 
+"Always show the status line
+set laststatus=2
+
+"Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
+""""""""""""""""""""""""""""""""""""""""
+" Files, backups and undo              "
+""""""""""""""""""""""""""""""""""""""""
 "Turn backup off, since most stuff is in SVN, git anyway
 set nobackup
 set nowb
@@ -60,23 +69,6 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
-
-""""""""""""""""""""""""""""""""""""""""
-" Status line                          "
-""""""""""""""""""""""""""""""""""""""""
-
-"Always show the status line
-set laststatus=2
-
-"Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-
-""""""""""""""""""""""""""""""""""""""""
-" Editing mappings                     "
-""""""""""""""""""""""""""""""""""""""""
-
-"Remap VIM 0 to the first non-blank character
-map 0 ^
 
 """""""""""""""""""""""""""""""""""""""
 " Now set the colors and fonts        "

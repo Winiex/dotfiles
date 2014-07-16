@@ -1,13 +1,14 @@
 """"""""""""""""""""""""""""""""""""""""
 " Basic Configurations                 "
 """"""""""""""""""""""""""""""""""""""""
-source ~/.dotfiles/vim/base.vim
 source ~/.dotfiles/vim/gvimrc.vim
+source ~/.dotfiles/vim/base.vim
 
 """"""""""""""""""""""""""""""""""""""""
 " Plugin Configurations                "
 """"""""""""""""""""""""""""""""""""""""
 source ~/.dotfiles/vim/plugin/nerdtree.vim
+source ~/.dotfiles/vim/plugin/powerline.vim
 
 """"""""""""""""""""""""""""""""""""""""
 " Startup functions                    "
