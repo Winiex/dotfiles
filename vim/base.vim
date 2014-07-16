@@ -1,16 +1,11 @@
-"Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions+=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
-
-"Set utf-8 encoding
-set encoding=utf8
-
-"Use unix as the standard file type
-set ffs=unix,dos,mac
+""""""""""""""""""""""""""""""""""""""""
+" The vundle's configuration           "
+""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+source ~/.dotfiles/vim/plugin/vundle.vim
 
 """"""""""""""""""""""""""""""""""""""""
 " Files, backups and undo              "
@@ -83,77 +78,6 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 "Remap VIM 0 to the first non-blank character
 map 0 ^
 
-""""""""""""""""""""""""""""""""""""""""
-" The vundle's configuration           "
-""""""""""""""""""""""""""""""""""""""""
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-source ~/.dotfiles/vim/plugin/bundle.vim
-
-""""""""""""""""""""""""""""""""""""""""
-" Helper functions                     "
-""""""""""""""""""""""""""""""""""""""""
-
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
-
-function! VisualSelection(direction) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", '\\/.*$^~[]')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
-
-
-"Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
-endfunction
-
-"Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-   let l:currentBufNum = bufnr("%")
-   let l:alternateBufNum = bufnr("#")
-
-   if buflisted(l:alternateBufNum)
-     buffer #
-   else
-     bnext
-   endif
-
-   if bufnr("%") == l:currentBufNum
-     new
-   endif
-
-   if buflisted(l:currentBufNum)
-     execute("bdelete! ".l:currentBufNum)
-   endif
-endfunction
-
 """""""""""""""""""""""""""""""""""""""
 " Now set the colors and fonts        "
 """""""""""""""""""""""""""""""""""""""
@@ -162,6 +86,12 @@ colorscheme Monokai
 """""""""""""""""""""""""""""""""""""""
 " Common Configurations               "
 """""""""""""""""""""""""""""""""""""""
+"Set utf-8 encoding
+set encoding=utf8
+
+"Use unix as the standard file type
+set ffs=unix,dos,mac
+
 "Enable syntax hightlighting
 syntax on
 
@@ -224,60 +154,63 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 "Set *.html.erb files to html, ruby and erb filetype
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.ruby.erb
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-
 """"""""""""""""""""""""""""""""""""""""
-" Plugin Configurations                "
-""""""""""""""""""""""""""""""""""""""""
-
-"Make NERDTree ignore non-source-code files
-let NERDTreeIgnore = ['\.pyc$']
-
-"Neocomplcache configurations
-source ~/.dotfiles/vim/plugin/neocomplcache.vim
-
-""""""""""""""""""""""""""""""""""""""""
-" Startup functions                    "
+" Helper functions                     "
 """"""""""""""""""""""""""""""""""""""""
 
-function! Startup()
-    "Make NERDTree autmatically started
-    if 0 == argc()
-        NERDTree
-    end
-    
-
-    "Let tagbar auto-start
-    Tagbar
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
 endfunction
 
-"Run startup function
-au VimEnter * call Startup()
+function! VisualSelection(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
 
-""""""""""""""""""""""""""""""""""""""""
-" Persnal keys mappings                "
-""""""""""""""""""""""""""""""""""""""""
-"CtrlP mappings
-map zps :CtrlP<Enter>
-map zpb :CtrlPBuffer<Enter>
-map zpm :CtrlPMRU<Enter>
-map zpx :CtrlPMixed<Enter>
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
 
-"Tagbar mappings
-map zgs :Tagbar<Enter>
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+    elseif a:direction == 'replace'
+        call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
 
-"Tabbar mappings"
-map zn :Tbbn<Enter>
-map zm :Tbbp<Enter>
-map zd :Tbbd<Enter>
-map zts :TbStart<Enter>
-map ztc :TbStop<Enter>
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
 
-"Format the entire source code file
-map zfm gg=G
 
-"Insert newline without entering insert mode
-nmap <S-Enter> O<Esc>
-nmap <Enter> o<Esc>
+"Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    en
+    return ''
+endfunction
 
-"Python flake8 check
-autocmd FileType python map <buffer> zfp :call Flake8()<CR>
+"Don't close window, when deleting a buffer
+command! Bclose call <SID>BufcloseCloseIt()
+function! <SID>BufcloseCloseIt()
+   let l:currentBufNum = bufnr("%")
+   let l:alternateBufNum = bufnr("#")
+
+   if buflisted(l:alternateBufNum)
+     buffer #
+   else
+     bnext
+   endif
+
+   if bufnr("%") == l:currentBufNum
+     new
+   endif
+
+   if buflisted(l:currentBufNum)
+     execute("bdelete! ".l:currentBufNum)
+   endif
+endfunction

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#Use this script to activate my touchpad when I really need
-#to use it.
-sudo modprobe psmouse

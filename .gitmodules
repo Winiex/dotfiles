@@ -2,3 +2,18 @@
 	path = vim/vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
     ignore = dirty
+[submodule "vim/vim/bundle/TabBar"]
+	path = vim/vim/bundle/TabBar
+	url = https://github.com/humiaozuzu/TabBar.git
+[submodule "vim/vim/bundle/nerdtree"]
+	path = vim/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/vim/bundle/tagbar"]
+	path = vim/vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim/vim/bundle/vim-colorschemes"]
+	path = vim/vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vim/vim/bundle/vim-flake8"]
+	path = vim/vim/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
