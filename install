@@ -43,10 +43,22 @@ if [ -f ~/.vimrc ]; then
     mv ~/.vimrc ~/.vimrc_backup
 fi
 
-ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+if [ -f ~/.gvimrc ]; then
+    echo "Found existing .gvimrc file in your HOME directory."
+    echo "Move it to ~/.gvimrc_backup."
+    mv ~/.gvimrc ~/.gvimrc_backup
+fi
+
+ln -s ~/.dotfiles/vim/vimrc.vim ~/.vimrc
+ln -s ~/.dotfiles/vim/gvimrc.vim ~/.gvimrc
 ln -s ~/.dotfiles/vim/vim/ ~/.vim
 
-echo "Success"
+echo "Install YouCompleteMe."
+#Here I create a new shell instance.
+(cd ~/.dotfiles/vim/vim/bundle/YouCompleteMe && git submodule update --init --recursive)
+~/.dotfiles/vim/vim/bundle/YouCompleteMe/install.sh --clang-completer
+
+echo "Success install vim configurations."
 
 #Install bash configurations.
 printf "\n"

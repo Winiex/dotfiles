@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#I don't like the touchpad when I'm doing my work.
-sudo rmmod psmouse
