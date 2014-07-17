@@ -12,14 +12,18 @@ fi
 #Use this childish ASCII art to make it rock a little bit.
 printf "\n"
 echo "#######################################"
-echo "#  Now clone dotfiles into .dotfiles  #"
+echo "#  Now download basic dotfiles        #"
 echo "#######################################"
 printf "\n"
 
 git clone https://github.com/Winiex/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
-echo "Success"
+echo "#######################################"
+echo "# Basic dotfiles installed.           #"
+echo "# Still a long way to go.             #"
+echo "#                -- By winiex         #"
+echo "#######################################"
 
 #Install vim configurations.
 printf "\n"
@@ -55,13 +59,18 @@ ln -s ~/.dotfiles/vim/vim/ ~/.vim
 
 printf "\n"
 echo "#######################################"
-echo "#  Install YouCompleteMe              #"
+echo "#  Now install YouCompleteMe          #"
 echo "#######################################"
 printf "\n"
+
 #Here I create a new shell instance.
 (cd ~/.dotfiles/vim/vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.sh)
 
-echo "Success install vim configurations."
+echo "#######################################"
+echo "# Vim configurations installed.       #"
+echo "# Emacs is good, I choose vim.        #"
+echo "#                -- By winiex         #"
+echo "#######################################"
 
 #Install bash configurations.
 printf "\n"
@@ -86,7 +95,11 @@ ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
 ln -s ~/.dotfiles/bash/bash-it ~/.bash_it
 
-echo "Success"
+echo "#######################################"
+echo "# Bash configurations installed.      #"
+echo "# Now your bash is your zsh.          #"
+echo "#                -- By winiex         #"
+echo "#######################################"
 
 #Install tmux configurations.
 printf "\n"
@@ -104,12 +117,16 @@ fi
 ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 
-echo "Success"
+echo "#######################################"
+echo "# Tmux configurations installed.      #"
+echo "# I use tmux to split huge screens.   #"
+echo "#                -- By winiex         #"
+echo "#######################################"
 
 #Install custom tools.
 printf "\n"
 echo "#######################################"
-echo "#  Now install bash configurations    #"
+echo "#  Now install custom tools           #"
 echo "#######################################"
 printf "\n"
 
@@ -121,10 +138,35 @@ fi
 
 ln -s ~/.dotfiles/bin ~/bin
 
-echo "Success"
+echo "#######################################"
+echo "# Custom tools installed.             #"
+echo "# Real man has his own tools .        #"
+echo "#                -- By winiex         #"
+echo "#######################################"
 
 printf "\n"
 echo "#######################################"
-echo "#  Dotfiles install success. Enjoy.:) #"
+echo "# Dotfiles installed successfully.    #"
+echo "# My dotfiles will find you.          #"
+echo "#                -- By winiex         #"
 echo "#######################################"
 printf "\n"
+
+printf "\n"
+echo " _____        _                           __        "
+echo " |  ___|      (_)                  _       \ \      "
+echo " | |__  _ __   _   ___   _   _    (_)______ | |     "
+echo " |  __|| '_ \ | | / _ \ | | | |     |______|| |     "
+echo " | |___| | | || || (_) || |_| |    _        | |     "
+echo " \____/|_| |_|| | \___/  \__, |   (_)       | |     "
+echo "             _/ |         __/ |            /_/      "
+echo "            |__/         |___/                      "
+echo "______             _    _  _         _              "
+echo "| ___ \           | |  | |(_)       (_)             "
+echo "| |_/ / _   _     | |  | | _  _ __   _   ___ __  __ "
+echo "| ___ \| | | |    | |/\| || || '_ \ | | / _ \\ \/ / "
+echo "| |_/ /| |_| |    \  /\  /| || | | || ||  __/ >  <  "
+echo "\____/  \__, |     \/  \/ |_||_| |_||_| \___|/_/\_\ "
+echo "         __/ |                                      "
+echo "        |___/                                       "
+echo "Contact Me: winiex.nie#gmail.com"
