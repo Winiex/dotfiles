@@ -18,7 +18,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
 
 "Python support
-Bundle 'nvie/vim-flake8'
+Bundle 'klen/python-mode'
 
 "Html and CSS support
 Bundle 'mattn/emmet-vim'
