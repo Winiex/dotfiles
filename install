@@ -53,10 +53,13 @@ ln -s ~/.dotfiles/vim/vimrc.vim ~/.vimrc
 ln -s ~/.dotfiles/vim/gvimrc.vim ~/.gvimrc
 ln -s ~/.dotfiles/vim/vim/ ~/.vim
 
-echo "Install YouCompleteMe."
+printf "\n"
+echo "#######################################"
+echo "#  Install YouCompleteMe              #"
+echo "#######################################"
+printf "\n"
 #Here I create a new shell instance.
-(cd ~/.dotfiles/vim/vim/bundle/YouCompleteMe && git submodule update --init --recursive)
-~/.dotfiles/vim/vim/bundle/YouCompleteMe/install.sh --clang-completer
+(cd ~/.dotfiles/vim/vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.sh)
 
 echo "Success install vim configurations."
 
