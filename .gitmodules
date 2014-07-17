@@ -14,9 +14,6 @@
 [submodule "vim/vim/bundle/vim-colorschemes"]
 	path = vim/vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
-[submodule "vim/vim/bundle/vim-flake8"]
-	path = vim/vim/bundle/vim-flake8
-	url = https://github.com/nvie/vim-flake8.git
 [submodule "vim/vim/bundle/YouCompleteMe"]
 	path = vim/vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
@@ -32,3 +29,6 @@
 [submodule "vim/vim/bundle/vim-powerline"]
 	path = vim/vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/vim/bundle/python-mode"]
+	path = vim/vim/bundle/python-mode
+	url = https://github.com/klen/python-mode.git
