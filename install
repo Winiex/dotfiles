@@ -140,7 +140,7 @@ ln -s ~/.dotfiles/bin ~/bin
 
 echo "#######################################"
 echo "# Custom tools installed.             #"
-echo "# Real man has his own tools.        #"
+echo "# Real man has his own tools.         #"
 echo "#                -- By winiex         #"
 echo "#######################################"
 
