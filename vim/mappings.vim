@@ -20,9 +20,12 @@ map ztc :TbStop<Enter>
 "Format the entire source code file
 map zfm gg=G
 
-"Insert newline without entering insert mode
+"Insert newline after current line without entering insert mode
 nmap OO O<Esc>
 nmap oo o<Esc>
+
+"Insert newline after cursor
+nmap io i<Enter><Esc>
 
 "Python flake8 check
 autocmd FileType python map <buffer> zfp :call Flake8()<CR>
