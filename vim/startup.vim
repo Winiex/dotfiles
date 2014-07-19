@@ -1,11 +1,9 @@
 function! Startup()
-    "Make NERDTree autmatically started
+    "Make NERDTree and Tagbar automatically start
     if 0 == argc()
         NERDTree
     end
-    
 
-    "Let tagbar auto-start
     Tagbar
 endfunction
 
