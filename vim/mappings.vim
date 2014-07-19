@@ -21,8 +21,8 @@ map ztc :TbStop<Enter>
 map zfm gg=G
 
 "Insert newline without entering insert mode
-"nmap <S-Enter> O<Esc>
-"nmap <Enter> o<Esc>
+nmap OO O<Esc>
+nmap oo o<Esc>
 
 "Python flake8 check
 autocmd FileType python map <buffer> zfp :call Flake8()<CR>
