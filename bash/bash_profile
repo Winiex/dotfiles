@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-distro=`cat /etc/*release`
+distro=`uname -a`
+
+# Take linux distro into consideration, because in arch linux, python's default version is python 3000
+if [[ "$distro" == *Arch* ]]
+then
+    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+fi
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
@@ -18,20 +24,10 @@ source $BASH_IT/bash_it.sh
 
 # Load virtualenvwrapper.sh
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
-    # Take linux distro into consideration, because in arch linux, python's default version is python 3000
-    if [[ "$distro" == *Arch* ]]
-    then
-        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
-    fi
     source /usr/bin/virtualenvwrapper.sh
 fi
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    # Take linux distro into consideration, because in arch linux, python's default version is python 3000
-    if [[ "$distro" == *Arch* ]]
-    then
-        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
-    fi
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
