@@ -20,3 +20,6 @@ let g:pymode_folding = 0
 
 " Disable rope
 "let g:pymode_rope = 0
+
+" Disable pydoc
+let g:pymode_doc = 0
