@@ -2,11 +2,12 @@
 " The Bundles to install vim plugins   "
 """"""""""""""""""""""""""""""""""""""""
 "Appearence
-Bundle "flazz/vim-colorschemes"
+Bundle 'flazz/vim-colorschemes'
 
 "Code completions
 
 "Code editing
+Bundle 'tpope/vim-surround'
 
 "IDE features
 Bundle 'scrooloose/nerdtree'
