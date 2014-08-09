@@ -32,3 +32,6 @@
 [submodule "vim/vim/bundle/python-mode"]
 	path = vim/vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
+[submodule "vim/vim/bundle/vim-surround"]
+	path = vim/vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
