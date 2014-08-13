@@ -17,6 +17,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 "Python support
 Bundle 'klen/python-mode'
