@@ -73,7 +73,7 @@ autocmd BufReadPost *
 """""""""""""""""""""""""""""""""""""""
 " Now set the colors and fonts        "
 """""""""""""""""""""""""""""""""""""""
-colorscheme anotherdark
+colorscheme Monokai-chris
 
 """""""""""""""""""""""""""""""""""""""
 " Common Configurations               "
