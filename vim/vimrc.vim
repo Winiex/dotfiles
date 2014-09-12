@@ -12,6 +12,7 @@ source ~/.dotfiles/vim/plugin/powerline.vim
 source ~/.dotfiles/vim/plugin/pythonmode.vim
 source ~/.dotfiles/vim/plugin/vimindentguides.vim
 source ~/.dotfiles/vim/plugin/neocomplete.vim
+source ~/.dotfiles/vim/plugin/jedi.vim
 
 """"""""""""""""""""""""""""""""""""""""
 " Startup functions                    "
