@@ -16,12 +16,13 @@ echo "#  Now download basic dotfiles        #"
 echo "#######################################"
 printf "\n"
 
-git clone https://github.com/Winiex/dotfiles.git ~/.dotfiles
+git clone --recursive https://github.com/Winiex/dotfiles.git ~/.dotfiles
+
 cd ~/.dotfiles
 
 echo "#######################################"
 echo "# Basic dotfiles installed.           #"
-echo "# Still a long way to go.             #"
+echo "# Everything is under control.        #"
 echo "#                -- By winiex         #"
 echo "#######################################"
 
@@ -31,9 +32,6 @@ echo "#######################################"
 echo "#  Now install vim configurations     #"
 echo "#######################################"
 printf "\n"
-
-git submodule init
-git submodule update
 
 if [ -d ~/.vim ]; then
     echo "Found existing .vim directory in your HOME directory."
@@ -175,7 +173,7 @@ echo "  ▗▄▄▄▄▄▄▄███▛▀▗▄████▌▗▙██
 echo "  ▐█▀  ▄▄██▛▀▗▟██████▙████████████████████████████████████▙▖"
 echo "   ▐ ▐██▌     ██████████████████████████████████████████████"
 echo "   ▝ ▝▀▀▘     ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀"
-echo "                These dotfiles is protected by:"
+echo "                These dotfiles are protected by:"
 echo "   ________               __      _   __                _"
 echo "  / ____/ /_  __  _______/ /__   / | / /___  __________(_)____"
 echo " / /   / __ \/ / / / ___/ //_/  /  |/ / __ \/ ___/ ___/ / ___/"
