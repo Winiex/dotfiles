@@ -57,15 +57,6 @@ ln -s ~/.dotfiles/vim/vimrc.vim ~/.vimrc
 ln -s ~/.dotfiles/vim/gvimrc.vim ~/.gvimrc
 ln -s ~/.dotfiles/vim/vim/ ~/.vim
 
-printf "\n"
-echo "#######################################"
-echo "#  Now install YouCompleteMe          #"
-echo "#######################################"
-printf "\n"
-
-#Here I create a new shell instance.
-(cd ~/.dotfiles/vim/vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.sh)
-
 echo "#######################################"
 echo "# Vim configurations installed.       #"
 echo "# Emacs is good, I choose vim.        #"

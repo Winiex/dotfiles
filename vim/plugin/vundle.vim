@@ -13,14 +13,16 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
 Bundle 'humiaozuzu/TabBar'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Shougo/neocomplete.vim'
+Bundle 'ervandew/supertab'
 
 "Python support
 Bundle 'klen/python-mode'
+Bundle 'davidhalter/jedi-vim'
 
 "Html and CSS support
 Bundle 'mattn/emmet-vim'
