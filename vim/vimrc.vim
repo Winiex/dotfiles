@@ -10,7 +10,6 @@ source ~/.dotfiles/vim/base.vim
 source ~/.dotfiles/vim/plugin/nerdtree.vim
 source ~/.dotfiles/vim/plugin/powerline.vim
 source ~/.dotfiles/vim/plugin/pythonmode.vim
-source ~/.dotfiles/vim/plugin/youcompleteme.vim
 source ~/.dotfiles/vim/plugin/vimindentguides.vim
 
 """"""""""""""""""""""""""""""""""""""""
