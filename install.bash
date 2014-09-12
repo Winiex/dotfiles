@@ -20,7 +20,7 @@ git clone --recursive https://github.com/Winiex/dotfiles.git ~/.dotfiles
 
 cd ~/.dotfiles
 
-git remote set-url "origin git@github.com:Winiex/dotfiles.git"
+git remote set-url origin "git@github.com:Winiex/dotfiles.git"
 
 echo "#######################################"
 echo "# Basic dotfiles installed.           #"
