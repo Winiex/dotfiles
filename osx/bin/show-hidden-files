@@ -1,0 +1,2 @@
+defaults write com.apple.finder AppleShowAllFiles -bool YES
+echo "Now hidden files could be seen in Finder."

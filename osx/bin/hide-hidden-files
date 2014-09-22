@@ -1,0 +1,2 @@
+defaults write com.apple.finder AppleShowAllFiles -bool NO
+echo "Now hidden files couldn't be seen in Finder."

@@ -101,7 +101,7 @@ printf "\n"
 
 if [ -f ~/.tmux.conf ]; then
     echo "Found existing .tmux.conf file in your HOME directory."
-    echo "Move it to ~/.tmux.conf_backup"
+    echo "Move it to ~/.tmux.conf_backup."
     mv ~/.tmux.conf ~/.tmux.conf_backup
 fi
 
@@ -111,27 +111,6 @@ tmux source-file ~/.tmux.conf
 echo "#######################################"
 echo "# Tmux configurations installed.      #"
 echo "# I use tmux to split huge screens.   #"
-echo "#                -- By winiex         #"
-echo "#######################################"
-
-#Install custom tools.
-printf "\n"
-echo "#######################################"
-echo "#  Now install custom tools           #"
-echo "#######################################"
-printf "\n"
-
-if [ -d ~/bin ]; then
-    echo "Found existing bin directory in your HOME directory."
-    echo "Move it to ~/bin_backup."
-    mv ~/bin ~/bin_backup
-fi
-
-ln -s ~/.dotfiles/bin ~/bin
-
-echo "#######################################"
-echo "# Custom tools installed.             #"
-echo "# Real man has his own tools.         #"
 echo "#                -- By winiex         #"
 echo "#######################################"
 
