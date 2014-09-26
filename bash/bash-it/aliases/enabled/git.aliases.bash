@@ -3,6 +3,7 @@ about-alias 'common git abbreviations'
 
 # Aliases
 alias gcl='git clone'
+alias gcr='git clone --recursive'
 alias ga='git add'
 alias gall='git add .'
 alias g='git'
@@ -27,6 +28,7 @@ alias gcp='git cherry-pick'
 alias gco='git checkout'
 alias gexport='git archive --format zip --output'
 alias gdel='git branch -D'
+alias gm='git merge'
 alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
