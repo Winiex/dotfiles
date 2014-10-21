@@ -1,0 +1,5 @@
+alias octopress-publish="(cblog && git-update-submodules-master && rake deploy)"
+alias octopress-deploy="(cblog && rake deploy)"
+alias octopress-preview="(cblog && rake preview)"
+alias octopress-generate="(cblog && rake generate)"
+alias octopress-watch="(cblog && rake watch)"
