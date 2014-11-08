@@ -35,6 +35,14 @@ fi
 
 rm ~/.tmux.conf
 
+if [ -d ~/.marks_backup ]; then
+    echo "Found existing .marks_backup directory in your HOME directory."
+    echo "Move it to ~/.marks"
+    mv ~/.marks_backup ~/.marks
+else
+    mkdir ~/.marks
+fi
+
 if [ -f ~/.tmux.conf_backup ]; then
     echo "Found existing .tmux.conf_backup file in your HOME directory."
     echo "Move it to ~/.tmux.conf."

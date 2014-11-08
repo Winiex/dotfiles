@@ -114,6 +114,26 @@ echo "# I use tmux to split huge screens.   #"
 echo "#                -- By winiex         #"
 echo "#######################################"
 
+#Install configurations of custom tools.
+printf "\n"
+echo "#######################################"
+echo "#  Now install tools configurations   #"
+echo "#######################################"
+printf "\n"
+
+if [ -d ~/.marks ]; then
+    echo "Found existing .marks directory in your HOME directory."
+    echo "Move it to ~/.marks_backup."
+    mv ~/.marks ~/.marks_backup
+fi
+
+mkdir ~/.marks
+
+echo "#######################################"
+echo "# Real man has his own tools.         #"
+echo "#                -- By winiex         #"
+echo "#######################################"
+
 printf "\n"
 echo "#######################################"
 echo "# Dotfiles installed successfully.    #"
