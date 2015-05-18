@@ -49,6 +49,12 @@ if [ -f ~/.tmux.conf_backup ]; then
     mv ~/.tmux.conf_backup ~/.tmux.conf
 fi
 
+if [ -f ~/.local.bash ]; then
+    echo "Found existing ~/.local.bash file in your HOME directory."
+    echo "Delete it."
+    rm ~/.local.bash
+fi
+
 rm -rf ~/.dotfiles
 
 echo "Uninstalled successfully."

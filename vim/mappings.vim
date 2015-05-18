@@ -25,7 +25,7 @@ nmap OO O<Esc>
 nmap oo o<Esc>
 
 "Insert newline after cursor
-nmap io i<Enter><Esc>
+nmap mo i<Enter><Esc>
 
 "Python flake8 check
 autocmd FileType python map <buffer> zfp :call Flake8()<CR>

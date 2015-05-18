@@ -82,6 +82,11 @@ if [ -f ~/.bashrc ]; then
     mv ~/.bashrc ~/.bashrc_backup
 fi
 
+if ! [ -f ~/.local.bash ]; then
+    echo "Create ~/.local.bash file where you can put your own bash configs."
+    touch ~/.local.bash
+fi
+
 ln -s ~/.dotfiles/bash/bash_profile.sh ~/.bash_profile
 ln -s ~/.dotfiles/bash/bashrc.sh ~/.bashrc
 ln -s ~/.dotfiles/bash/bash-it ~/.bash_it
