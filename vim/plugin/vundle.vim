@@ -26,3 +26,6 @@ Bundle 'davidhalter/jedi-vim'
 
 "Html and CSS support
 Bundle 'mattn/emmet-vim'
+
+"Thrift support
+Bundle 'solarnz/thrift.vim'
