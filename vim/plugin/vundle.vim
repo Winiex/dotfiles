@@ -29,3 +29,6 @@ Bundle 'mattn/emmet-vim'
 
 "Thrift support
 Bundle 'solarnz/thrift.vim'
+
+"Jinja2 support
+Bundle 'mitsuhiko/vim-jinja'

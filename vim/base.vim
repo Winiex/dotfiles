@@ -139,6 +139,11 @@ set tm=500
 "Enable cscope features
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
+"Highlighting the current line & column
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+
 """"""""""""""""""""""""""""""""""""""""
 " Set Filetypes                        "
 """"""""""""""""""""""""""""""""""""""""

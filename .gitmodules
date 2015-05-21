@@ -44,3 +44,9 @@
 [submodule "vim/vim/bundle/thrift.vim"]
 	path = vim/vim/bundle/thrift.vim
 	url = https://github.com/solarnz/thrift.vim.git
+[submodule "vim/vim/bundle/python-mode"]
+	path = vim/vim/bundle/python-mode
+	url = https://github.com/klen/python-mode.git
+[submodule "vim/vim/bundle/vim-jinja"]
+	path = vim/vim/bundle/vim-jinja
+	url = https://github.com/mitsuhiko/vim-jinja.git
