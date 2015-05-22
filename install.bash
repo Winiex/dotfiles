@@ -91,6 +91,41 @@ ln -s ~/.dotfiles/bash/bash_profile.sh ~/.bash_profile
 ln -s ~/.dotfiles/bash/bashrc.sh ~/.bashrc
 ln -s ~/.dotfiles/bash/bash-it ~/.bash_it
 
+if ! [ -d ~/repository ]; then
+    echo "~/repository directories not exists, create it."
+    mkdir "~/repository"
+    mkdir "~/repository/code"
+    mkdir "~/repository/source"
+    mkdir "~/repository/play"
+else
+    if ! [ -d ~/repository/code ]; then
+        mkdir "~/repository/code"
+    fi
+
+    if ! [ -d ~/repository/play ]; then
+        mkdir "~/repository/play"
+    fi
+
+    if ! [ -d ~/repository/source ]; then
+        mkdir "~/repository/source"
+    fi
+fi
+
+if [ -d ~/repository/code ]; then
+    echo "Link ~/repository/code to ~/code."
+    ln -s "~/repository/code" "~/code"
+fi
+
+if [ -d ~/repository/source ]; then
+    echo "Link ~/repository/source to ~/source."
+    ln -s "~/repository/source" "~/source"
+fi
+
+if [ -d ~/repository/play ]; then
+    echo "Link ~/repository/play to ~/play."
+    ln -s "~/repository/play" "~/play"
+fi
+
 echo "#######################################"
 echo "# Bash configurations installed.      #"
 echo "# Now your bash is your zsh.          #"
