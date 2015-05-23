@@ -32,3 +32,6 @@ Bundle 'solarnz/thrift.vim'
 
 "Jinja2 support
 Bundle 'mitsuhiko/vim-jinja'
+
+"Golang support
+Bundle 'fatih/vim-go'
