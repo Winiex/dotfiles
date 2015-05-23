@@ -14,6 +14,7 @@ source ~/.dotfiles/vim/plugin/vimindentguides.vim
 source ~/.dotfiles/vim/plugin/neocomplete.vim
 source ~/.dotfiles/vim/plugin/jedi.vim
 source ~/.dotfiles/vim/plugin/supertab.vim
+source ~/.dotfiles/vim/plugin/syntastic.vim
 
 """"""""""""""""""""""""""""""""""""""""
 " Startup functions                    "
