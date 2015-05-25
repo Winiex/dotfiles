@@ -1,8 +1,13 @@
 # Tools used in golang
+export GOPATH=~
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
+
 function gopwd {
     export GOPATH=`pwd`
+    export GOBIN=$GOPATH/bin:$GOPATH/vendor/bin
+    export PATH=$GOBIN:$PATH
     export GOPATH=$GOPATH:$GOPATH/vendor
-    export PATH=$GOPATH/bin:$PATH
 }
 
 function cgopath {
