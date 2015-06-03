@@ -1,5 +1,5 @@
 # Tools used in golang
-export GOPATH=~
+export GOPATH=~/.gohome
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 

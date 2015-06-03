@@ -126,6 +126,11 @@ if [ -d ~/repository/play ]; then
     ln -s "~/repository/play" "~/play"
 fi
 
+if ! [ -d ~/.gohome ]; then
+    echo "Create golang home dir."
+    mkdir ~/.gohome
+fi
+
 echo "#######################################"
 echo "# Bash configurations installed.      #"
 echo "# Now your bash is your zsh.          #"

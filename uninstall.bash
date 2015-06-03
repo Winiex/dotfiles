@@ -55,6 +55,12 @@ if [ -f ~/.local.bash ]; then
     rm ~/.local.bash
 fi
 
+if [ -d ~/.gohome ]; then
+    echo "Found existing ~/.gohome dir in your HOME directory."
+    echo "Delete it."
+    rm -rf ~/.local.bash
+fi
+
 rm -rf ~/.dotfiles
 
 echo "Uninstalled successfully."
