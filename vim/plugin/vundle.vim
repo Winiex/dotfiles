@@ -19,6 +19,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'ervandew/supertab'
+Bundle 'mileszs/ack.vim'
 
 "Python support
 Bundle 'klen/python-mode'
