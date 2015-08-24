@@ -1,3 +1,6 @@
+"Set checkers
+let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'pyflakes']
+
 "Linting
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
