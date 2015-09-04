@@ -36,3 +36,7 @@ Bundle 'mitsuhiko/vim-jinja'
 
 "Golang support
 Bundle 'fatih/vim-go'
+
+"Javascript support
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
