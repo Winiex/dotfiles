@@ -8,3 +8,8 @@ source $BASH_HOME/configs/python.sh
 source $BASH_HOME/configs/rvm.sh
 source $BASH_HOME/configs/virtualenv.sh
 source $BASH_HOME/configs/osx.sh
+
+if [[ -f ~/.local.bash ]]
+then
+    source ~/.local.bash
+fi
