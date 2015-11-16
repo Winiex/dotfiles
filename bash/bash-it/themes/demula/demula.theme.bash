@@ -82,6 +82,26 @@ ${D_BRANCH_COLOR}%b %r ${D_CHANGES_COLOR}%m%u ${D_DEFAULT_COLOR}"
   fi
 }
 
+my_virtualenv() {
+    VIRTUALENV=`echo ${VIRTUAL_ENV##*/}`
+
+    if [[ $VIRTUALENV = "" ]]; then
+        return
+    else
+        echo "[venv: ${D_SCM_COLOR}${BRACKET_COLOR}${STRING_COLOR}$VIRTUALENV${BRACKET_COLOR}${D_INTERMEDIATE_COLOR}]"
+    fi
+}
+
+modern_scm_prompt() {
+        CHAR=$(scm_char)
+        if [ $CHAR = $SCM_NONE_CHAR ]
+        then
+                return
+        else
+                echo "${BRACKET_COLOR}[${CHAR}${BRACKET_COLOR}][${STRING_COLOR}$(scm_prompt_info)${BRACKET_COLOR}]$normal"
+        fi
+}
+
 # -------------------------------------------------------------- PROMPT OUTPUT
 prompt() {
   local SAVE_CURSOR='\033[s'
@@ -93,23 +113,21 @@ prompt() {
   then
     PS1="${TITLEBAR}
 ${SAVE_CURSOR}${MOVE_CURSOR_RIGHTMOST}${MOVE_CURSOR_5_LEFT}\
-$(battery_charge)${RESTORE_CURSOR}\
+${RESTORE_CURSOR}\
 ${D_USER_COLOR}\u ${D_INTERMEDIATE_COLOR}\
 at ${D_MACHINE_COLOR}\h ${D_INTERMEDIATE_COLOR}\
 in ${D_DIR_COLOR}\w ${D_INTERMEDIATE_COLOR}\
-$(mitsuhikos_lastcommandfailed)\
 $(demula_vcprompt)\
 $(is_vim_shell)
 ${D_INTERMEDIATE_COLOR}$ ${D_DEFAULT_COLOR}"
   else
     PS1="${TITLEBAR}
-${D_USER_COLOR}\u ${D_INTERMEDIATE_COLOR}\
-at ${D_MACHINE_COLOR}\h ${D_INTERMEDIATE_COLOR}\
-in ${D_DIR_COLOR}\w ${D_INTERMEDIATE_COLOR}\
-$(mitsuhikos_lastcommandfailed)\
-$(demula_vcprompt)\
-$(is_vim_shell)\
-$(battery_charge)
+[me: ${D_USER_COLOR}\u${D_INTERMEDIATE_COLOR}]\
+[host: ${D_MACHINE_COLOR}\h${D_INTERMEDIATE_COLOR}]\
+[dir: ${D_DIR_COLOR}\w${D_INTERMEDIATE_COLOR}]\
+[scm: ${D_SCM_COLOR}$(modern_scm_prompt)${D_INTERMEDIATE_COLOR}]\
+$(my_virtualenv)\
+$(is_vim_shell)
 ${D_INTERMEDIATE_COLOR}$ ${D_DEFAULT_COLOR}"
   fi
 
