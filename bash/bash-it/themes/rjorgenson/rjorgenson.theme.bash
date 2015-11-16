@@ -3,7 +3,7 @@
 # set colors for use throughout the prompt
 # i like things consistent
 BRACKET_COLOR=${blue}
-STRING_COLOR=${green}
+STRING_COLOR=${cyan}
 
 SCM_THEME_PROMPT_PREFIX=""
 SCM_THEME_PROMPT_SUFFIX=""
@@ -69,9 +69,19 @@ modern_scm_prompt() {
 
 my_prompt_char() {
     if [[ $OSTYPE =~ "darwin" ]]; then
-        echo "${BRACKET_COLOR}➞  ${normal}"
+        echo "${BRACKET_COLOR}─| ${normal}"
     else
-        echo "${BRACKET_COLOR}➞ ${normal}"
+        echo "${BRACKET_COLOR}─| ${normal}"
+    fi
+}
+
+my_virtualenv() {
+    VIRTUALENV=`echo ${VIRTUAL_ENV##*/}`
+
+    if [[ $VIRTUALENV = "" ]]; then
+        return
+    else
+        echo "${BRACKET_COLOR}[${STRING_COLOR}$VIRTUALENV${BRACKET_COLOR}]"
     fi
 }
 
@@ -84,10 +94,10 @@ prompt() {
 
     # nice prompt
     case "`id -u`" in
-        0) PS1="${TITLEBAR}${BRACKET_COLOR}┌─[$my_ps_root${BRACKET_COLOR}][$my_ps_host${BRACKET_COLOR}]$(modern_scm_prompt)$(__my_rvm_ruby_version)${BRACKET_COLOR}[${STRING_COLOR}\w${BRACKET_COLOR}]$(is_vim_shell)
+        0) PS1="${TITLEBAR}${BRACKET_COLOR}┌─[$my_ps_root${BRACKET_COLOR}][$my_ps_host${BRACKET_COLOR}]$(modern_scm_prompt)$(__my_rvm_ruby_version)$(my_virtualenv)${BRACKET_COLOR}[${STRING_COLOR}\w${BRACKET_COLOR}]$(is_vim_shell)
 ${BRACKET_COLOR}└─$(my_prompt_char)${normal}"
         ;;
-        *) PS1="${TITLEBAR}${BRACKET_COLOR}┌─[$my_ps_user${BRACKET_COLOR}][$my_ps_host${BRACKET_COLOR}]$(modern_scm_prompt)$(__my_rvm_ruby_version)${BRACKET_COLOR}[${STRING_COLOR}\w${BRACKET_COLOR}]$(is_vim_shell)
+        *) PS1="${TITLEBAR}${BRACKET_COLOR}┌─[$my_ps_user${BRACKET_COLOR}][$my_ps_host${BRACKET_COLOR}]$(modern_scm_prompt)$(__my_rvm_ruby_version)$(my_virtualenv)${BRACKET_COLOR}[${STRING_COLOR}\w${BRACKET_COLOR}]$(is_vim_shell)
 ${BRACKET_COLOR}└─$(todo_txt_count)$(my_prompt_char)"
         ;;
     esac
